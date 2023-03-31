@@ -3,10 +3,8 @@ FROM node:11 as builder
 
 ENV NODE_OPTIONS="--max-old-space-size=4096"
 
-COPY . /source/
-RUN cd /source/ && \
-  rm -rf build && \
-  npm install
+#COPY . /source/
+RUN npm install
 
 #FROM nginx:stable-alpine as prod
 #ARG VERSION
