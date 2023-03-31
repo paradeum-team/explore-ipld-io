@@ -10,9 +10,12 @@
 
 # replace the frented params
 
-VERSION=`cat version`
-grep VERSION /usr/share/nginx/html/conf.js 2>/dev/null || echo -e "\nVERSION='$VERSION';" >> /usr/share/nginx/html/conf.js
+#VERSION=`cat version`
+#grep VERSION /usr/share/nginx/html/conf.js 2>/dev/null || echo -e "\nVERSION='$VERSION';" >> /usr/share/nginx/html/conf.js
 
 
 # run nginx
-exec /usr/sbin/nginx -g "daemon off;"
+#exec /usr/sbin/nginx -g "daemon off;"
+
+ls
+npm start
