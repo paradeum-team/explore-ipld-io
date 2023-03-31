@@ -12,7 +12,7 @@ RUN npm install
 
 #COPY --from=0 source/build/ /usr/share/nginx/html/
 
-COPY --from=0 ./entrypoint.sh /
+COPY --from=0 ./* /
 
 RUN chmod 755 /entrypoint.sh
 
