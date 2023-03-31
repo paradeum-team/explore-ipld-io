@@ -7,19 +7,17 @@ COPY . /source/
 RUN cd /source/ && \
   rm -rf build && \
   npm install && \
-  npm run build 
+  npm start
 
-FROM nginx:stable-alpine as prod
-ARG VERSION
-RUN echo $VERSION > /version
+#FROM nginx:stable-alpine as prod
+#ARG VERSION
+#RUN echo $VERSION > /version
 
-COPY --from=0 source/build/ /usr/share/nginx/html/
-# update custom nginx conf reason by vue-router
-#COPY --from=0 source/default.conf /etc/nginx/conf.d/
-# run script
-COPY --from=0 source/entrypoint.sh /
+#COPY --from=0 source/build/ /usr/share/nginx/html/
 
-RUN chmod 755 /entrypoint.sh
+#COPY --from=0 source/entrypoint.sh /
 
-EXPOSE 80
-CMD ["/entrypoint.sh"]
+#RUN chmod 755 /entrypoint.sh
+
+EXPOSE 3000
+#CMD ["/entrypoint.sh"]
