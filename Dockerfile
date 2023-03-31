@@ -6,8 +6,7 @@ ENV NODE_OPTIONS="--max-old-space-size=4096"
 COPY . /source/
 RUN cd /source/ && \
   rm -rf build && \
-  npm install && \
-  npm start
+  npm install
 
 #FROM nginx:stable-alpine as prod
 #ARG VERSION
@@ -21,3 +20,4 @@ RUN cd /source/ && \
 
 EXPOSE 3000
 #CMD ["/entrypoint.sh"]
+CMD ["npm","start"]
