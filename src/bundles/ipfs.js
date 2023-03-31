@@ -4,7 +4,7 @@ import { create } from 'ipfs-http-client'
 
 const defaultState = {
   apiOpts: {
-    host: 'test-ipfs-headless.test-ipfs-cluster',
+    host: '127.0.0.1',
     port: '5001',
     protocol: 'http'
   },
