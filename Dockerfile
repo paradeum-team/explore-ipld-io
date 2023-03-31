@@ -12,9 +12,9 @@ RUN npm install
 
 #COPY --from=0 source/build/ /usr/share/nginx/html/
 
-#COPY --from=0 source/entrypoint.sh /
+COPY --from=0 ./entrypoint.sh /
 
-#RUN chmod 755 /entrypoint.sh
+RUN chmod 755 /entrypoint.sh
 
 EXPOSE 3000
 CMD ["/entrypoint.sh"]
