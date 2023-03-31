@@ -17,5 +17,5 @@ RUN npm install
 #RUN chmod 755 /entrypoint.sh
 
 EXPOSE 3000
-#CMD ["/entrypoint.sh"]
-CMD ["npm","start"]
+CMD ["/entrypoint.sh"]
+#CMD ["npm","start"]
