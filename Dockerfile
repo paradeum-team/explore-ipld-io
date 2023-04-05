@@ -14,7 +14,8 @@ RUN cd /source/ && \
 
 # run script
 
-RUN chmod 755 /source//entrypoint.sh
+RUN chmod 755 /source/entrypoint.sh
+WORKDIR /source
 
 EXPOSE 3000
-CMD ["/source/entrypoint.sh"]
+CMD ["./entrypoint.sh"]
