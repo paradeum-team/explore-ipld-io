@@ -9,8 +9,7 @@ RUN echo $VERSION > /version
 COPY . /source/
 RUN cd /source/ && \
   rm -rf build && \
-  npm install && \
-  npm run build 
+  npm install
 
 # run script
 
