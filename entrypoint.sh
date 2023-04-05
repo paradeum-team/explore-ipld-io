@@ -12,8 +12,9 @@
 
 VERSION=`cat version`
 echo $VERSION
-grep VERSION /usr/share/nginx/html/conf.js 2>/dev/null || echo -e "\nVERSION='$VERSION';" >> /usr/share/nginx/html/conf.js
+grep VERSION /source/conf.js 2>/dev/null || echo -e "\nVERSION='$VERSION';" >> /source/conf.js
 
 
 # run nginx
-exec /usr/sbin/nginx -g "daemon off;"
+#exec /usr/sbin/nginx -g "daemon off;"
+exec npm start
