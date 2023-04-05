@@ -1,5 +1,5 @@
 ARG VERSION=latest
-FROM node:14 as builder
+FROM registry.hub.docker.com/library/node:14 as builder
 
 ENV NODE_OPTIONS="--max-old-space-size=4096"
 
