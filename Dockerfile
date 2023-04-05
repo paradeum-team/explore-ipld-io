@@ -1,5 +1,5 @@
 ARG VERSION=latest
-FROM node:12 as builder
+FROM node:14 as builder
 
 ENV NODE_OPTIONS="--max-old-space-size=4096"
 
