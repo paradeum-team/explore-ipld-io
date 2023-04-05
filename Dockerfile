@@ -13,9 +13,8 @@ RUN cd /source/ && \
   npm run build 
 
 # run script
-COPY source/entrypoint.sh /
 
-RUN chmod 755 /entrypoint.sh
+RUN chmod 755 /source//entrypoint.sh
 
 EXPOSE 3000
-CMD ["/entrypoint.sh"]
+CMD ["/source/entrypoint.sh"]
