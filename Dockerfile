@@ -13,7 +13,7 @@ RUN cd /source/ && \
   npm run build 
 
 # run script
-COPY --from=0 source/entrypoint.sh /
+COPY source/entrypoint.sh /
 
 RUN chmod 755 /entrypoint.sh
 
