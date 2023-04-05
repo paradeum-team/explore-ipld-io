@@ -1,5 +1,5 @@
 ARG VERSION=latest
-FROM node:11 as builder
+FROM node:12 as builder
 
 ENV NODE_OPTIONS="--max-old-space-size=4096"
 
@@ -15,7 +15,7 @@ RUN echo $VERSION > /version
 
 COPY --from=0 source/build/ /usr/share/nginx/html/
 # update custom nginx conf reason by vue-router
-#COPY --from=0 source/default.conf /etc/nginx/conf.d/
+COPY --from=0 source/default.conf /etc/nginx/conf.d/
 # run script
 COPY --from=0 source/entrypoint.sh /
 
